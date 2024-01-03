@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     int FREQUENCY = 38000;
@@ -18,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         irManager = (ConsumerIrManager) getSystemService(CONSUMER_IR_SERVICE);
+
+        Button volUp = findViewById(R.id.btn_vol_up);
+        volUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendIRSignal(FREQUENCY, IR_VOL_UP);
+            }
+        });
     }
 
     private void sendIRSignal(int frequency, int[] pattern) {
