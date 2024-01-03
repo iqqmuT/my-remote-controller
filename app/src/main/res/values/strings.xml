@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">My Remote Controller</string>
+    <string name="epson_power_off">EPSON OFF</string>
+    <string name="epson_power_on">EPSON ON</string>
+    <string name="hk_power_off">HK OFF</string>
+    <string name="hk_power_on">HK ON</string>
     <string name="vol_up">Vol +</string>
+    <string name="vol_dn">Vol -</string>
 </resources>
